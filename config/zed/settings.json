@@ -1,0 +1,88 @@
+// https://zed.dev/docs/configuring-zed
+{
+  /* Theme the UI */
+  "ui_font_family": "System Font", // Shows warning, but works on macOS
+  "buffer_font_family": "SF Mono",
+  "theme": {
+    "light": "macOS Classic Light",
+    "dark": "macOS Classic Dark"
+  },
+
+  /* Configure the editor */
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "tab_size": 2,
+  "show_wrap_guides": true,
+  "wrap_guides": [80, 120],
+
+  /* Configure the terminal */
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait"
+    }
+  },
+
+  /* Remove extraneous UI elements */
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false
+  },
+
+  /* Disable the AI disaster */
+  "assistant": {
+    "version": "1",
+    "enabled": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "features": {
+    "inline_completion_provider": "none"
+  },
+
+  /* Provide available language servers */
+  "lsp": {
+    // gem install ruby-lsp
+    "ruby-lsp": {
+      "initialization_options": {
+        "enabledFeatures": {
+          "diagnostics": false
+        }
+      }
+    },
+
+    // npm install -g @tailwindcss/language-server
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "erb": "html",
+          "ruby": "html"
+        },
+        "experimental": {
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
+        }
+      }
+    }
+  },
+
+  /* Configure per-language settings */
+  "languages": {
+    "Ruby": {
+      "language_servers": [
+        "tailwindcss-language-server",
+        "ruby-lsp",
+        "!solargraph"
+      ],
+      "prettier": {
+        "allowed": true
+      }
+    }
+  }
+}
