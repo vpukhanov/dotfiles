@@ -2,7 +2,7 @@
 {
   /* Theme the UI */
   "ui_font_family": "System Font", // Shows warning, but works on macOS
-  "buffer_font_family": "SF Mono",
+  "buffer_font_family": "SF Mono", // https://developer.apple.com/fonts/
   "theme": {
     "light": "macOS Classic Light",
     "dark": "macOS Classic Dark"
