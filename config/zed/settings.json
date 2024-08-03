@@ -1,7 +1,7 @@
 // https://zed.dev/docs/configuring-zed
 {
   /* Theme the UI */
-  "ui_font_family": "System Font", // Shows warning, but works on macOS
+  "ui_font_family": "System Font", // Displays warning, but works on macOS
   "buffer_font_family": "SF Mono", // https://developer.apple.com/fonts/
   "theme": {
     "light": "macOS Classic Light",
@@ -33,6 +33,9 @@
     "breadcrumbs": false,
     "quick_actions": false,
     "selections_menu": false
+  },
+  "collaboration_panel": {
+    "button": false
   },
 
   /* Disable the AI disaster */
